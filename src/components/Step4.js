@@ -44,7 +44,7 @@ export default function Step4({ steps, setSteps, plan, addOns, isChecked }) {
   console.log("Total cost: " + totalCost);
 
   return (
-    <div className={`${steps.step4 ? "block" : "hidden"}`}>
+    <div className={`${steps.step4 ? "block" : "hidden"} w-full`}>
       <h1 className="text-4xl font-semibold">Finishing up</h1>
       <p className="text-[20px] mt-3 text-[#a3a3ad]">
         Double-check everything looks OK before confirming.

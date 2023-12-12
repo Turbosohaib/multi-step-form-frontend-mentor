@@ -43,7 +43,7 @@ export default function Step1({ steps, setSteps }) {
     <div
       className={`md:static absolute top-[140px] ${
         steps.step1 ? "block" : "hidden"
-      } md:w-fit w-[350px] bg-white md:p-0 p-5 md:rounded-none rounded-xl`}
+      } md:w-full w-[350px] bg-white md:p-0 p-5 md:rounded-none rounded-xl`}
     >
       <h1 className="md:text-4xl text-2xl font-semibold">Personal info</h1>
       <p className="md:text-[20px] mt-3 text-[#a3a3ad]">

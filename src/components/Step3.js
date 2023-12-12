@@ -82,7 +82,7 @@ export default function Step3({
     <div
       className={`md:static absolute top-[140px] ${
         steps.step3 ? "block" : "hidden"
-      } md:w-fit w-[350px] bg-white md:p-0 p-5 md:rounded-none rounded-xl`}
+      } md:w-full w-[350px] bg-white md:p-0 p-5 md:rounded-none rounded-xl`}
     >
       <h1 className="md:text-4xl text-3xl font-semibold">Pick add-ons</h1>
       <p className="text-[20px] mt-3 text-[#a3a3ad]">
