@@ -35,17 +35,9 @@ export default function SideBar({ steps, setSteps }) {
   // };
 
   return (
-    <div className="relative col-span-1 rounded-2xl">
-      <Image
-        src="/assets/images/bg-sidebar-desktop.png"
-        className="h-[650px] w-[300px]"
-        width={300}
-        height={650}
-        alt="sidebar"
-      />
-      <div className="absolute uppercase top-0 px-7 py-9 text-white">
-        <div className="flex mb-6">
-          {" "}
+    <div className="md:w-[270px] w-full md:h-full h-[200px] md:py-0 py-[20px] col-span-1 md:rounded-lg md:bg-[url('../../public/assets/images/bg-sidebar-desktop.png')]  bg-[url('/assets/images/bg-sidebar-mobile.png')] bg-no-repeat bg-cover">
+      <div className="md:block flex justify-center items-center uppercase px-7 md:w-fit w-full  py-9 text-white">
+        <div className="flex md:mb-6 md:px-0 px-4">
           <div
             className={`w-[40px] h-[40px] border rounded-full ${
               steps.step1 ? "bg-[#bee1fe] text-black" : ""
@@ -53,12 +45,12 @@ export default function SideBar({ steps, setSteps }) {
           >
             1
           </div>
-          <div className="ml-4">
+          <div className="ml-4 md:block hidden">
             <div className="text-sm opacity-[0.5]">Step 1</div>
-            <div className="font-semibold">Your info</div>
+            <div className="text-lg font-semibold">Your info</div>
           </div>
         </div>
-        <div className="flex mb-6">
+        <div className="flex md:mb-6 md:px-0 px-4">
           {" "}
           <div
             className={`w-[40px] h-[40px] border rounded-full ${
@@ -67,12 +59,12 @@ export default function SideBar({ steps, setSteps }) {
           >
             2
           </div>
-          <div className="ml-4">
+          <div className="ml-4 md:block hidden">
             <div className="text-sm opacity-[0.5]">Step 2</div>
-            <div className="font-semibold">Select plan</div>
+            <div className="text-lg font-semibold">Select plan</div>
           </div>
         </div>
-        <div className="flex mb-6">
+        <div className="flex md:mb-6 md:px-0 px-4">
           {" "}
           <div
             className={`w-[40px] h-[40px] border rounded-full ${
@@ -81,12 +73,12 @@ export default function SideBar({ steps, setSteps }) {
           >
             3
           </div>
-          <div className="ml-4">
+          <div className="ml-4 md:block hidden">
             <div className="text-sm opacity-[0.5]">Step 3</div>
-            <div className="font-semibold">Add-ons</div>
+            <div className="text-lg font-semibold">Add-ons</div>
           </div>
         </div>
-        <div className="flex">
+        <div className="flex md:px-0 px-4">
           {" "}
           <div
             className={`w-[40px] h-[40px] border rounded-full ${
@@ -95,9 +87,9 @@ export default function SideBar({ steps, setSteps }) {
           >
             4
           </div>
-          <div className="ml-4">
+          <div className="ml-4 md:block hidden">
             <div className="text-sm opacity-[0.5]">Step 4</div>
-            <div className="font-semibold">Summary</div>
+            <div className="text-lg font-semibold">Summary</div>
           </div>
         </div>
       </div>

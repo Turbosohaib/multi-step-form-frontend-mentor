@@ -40,14 +40,18 @@ export default function Step1({ steps, setSteps }) {
     }
   };
   return (
-    <div className={`${steps.step1 ? "block" : "hidden"}`}>
-      <h1 className="text-4xl font-semibold">Personal info</h1>
-      <p className="text-[20px] mt-3 text-[#a3a3ad]">
+    <div
+      className={`md:static absolute top-[140px] ${
+        steps.step1 ? "block" : "hidden"
+      } md:w-fit w-[350px] bg-white md:p-0 p-5 md:rounded-none rounded-xl`}
+    >
+      <h1 className="md:text-4xl text-2xl font-semibold">Personal info</h1>
+      <p className="md:text-[20px] mt-3 text-[#a3a3ad]">
         Please provide your name, email address, and phone number.
       </p>
 
       <div className="mt-8">
-        <div className="w-[561px]">
+        <div className="w-full">
           <div className="w-full flex justify-between">
             <label htmlFor="name" className="font-medium">
               Name
@@ -67,11 +71,11 @@ export default function Step1({ steps, setSteps }) {
             onChange={(e) => setName(e.target.value)}
             className={`border-[2px] mt-1 ${
               errors.name ? "border-red-600" : "border-[#eaeaed]"
-            }  w-full text-lg font-medium px-5 py-3 rounded-lg`}
+            }  w-full md:text-lg font-medium px-5 md:py-3 py-2 rounded-lg`}
             placeholder="e.g. Stephen King"
           />
         </div>
-        <div className="mt-5 w-[561px]">
+        <div className="mt-5 w-full">
           <div className="w-full flex justify-between">
             <label htmlFor="email" className="font-medium">
               Email Address
@@ -93,12 +97,12 @@ export default function Step1({ steps, setSteps }) {
             onChange={(e) => setEmail(e.target.value)}
             className={`border-[2px] mt-1 ${
               errors.email ? "border-red-600" : "border-[#eaeaed]"
-            } w-full text-lg font-medium px-5 py-3 rounded-lg`}
+            } w-full md:text-lg font-medium px-5 md:py-3 py-2 rounded-lg`}
             placeholder="e.g. stephenking@lorem.com"
           />
         </div>
         <div className="mt-5">
-          <div className="w-[561px] flex justify-between">
+          <div className="w-full flex justify-between">
             <label htmlFor="number" className="font-medium">
               Phone Number
             </label>
@@ -117,18 +121,18 @@ export default function Step1({ steps, setSteps }) {
             onChange={(e) => setNumber(e.target.value)}
             className={`border-[2px] mt-1 ${
               errors.number ? "border-red-600" : "border-[#eaeaed]"
-            } w-full text-lg font-medium px-5 py-3 rounded-lg`}
+            } w-full md:text-lg font-medium px-5 md:py-3 py-2 rounded-lg`}
             placeholder="e.g. +1 234 567 890"
           />
         </div>
-        <div className="w-full flex justify-end mt-32">
-          <button
-            onClick={handleSubmit}
-            className="text-center font-medium text-lg items-center px-6 py-3 hover:bg-[#174a8b] bg-[#03295a]  text-white rounded-lg"
-          >
-            Next Step
-          </button>
-        </div>
+      </div>
+      <div className="w-full flex justify-end md:mt-[133px] mt-[30px]">
+        <button
+          onClick={handleSubmit}
+          className="text-center font-medium text-lg items-center px-6 py-3 hover:bg-[#174a8b] bg-[#03295a]  text-white rounded-lg"
+        >
+          Next Step
+        </button>
       </div>
     </div>
   );
